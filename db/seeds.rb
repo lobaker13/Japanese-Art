@@ -77,7 +77,7 @@ Artist.create([
   }
 ])
 
-art.create([
+Art.create([
   {
     name: "Name of the piece",
     artist_id: 1,
@@ -194,7 +194,7 @@ Keyword.create([
   }
 ])
 
-artKeyword.create([
+ArtKeyword.create([
   {
     keyword_id: 1,
     art_id: 1
