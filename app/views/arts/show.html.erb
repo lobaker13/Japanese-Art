@@ -20,5 +20,11 @@
   <%= @art.artist %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+ 	<%= image_tag @art.image.url(:medium) %>
+</p>
+
+
 <%= link_to 'Edit', edit_art_path(@art) %> |
 <%= link_to 'Back', arts_path %>
