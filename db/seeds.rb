@@ -5,6 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create([
+  fname: "Logan",
+  lname: "Baker",
+  email: "lobaker13@gmail.com",
+  password: "test",
+
+  ])
+
+
 Artist.create([
   {
     name: "Katsushika Hokusai",
@@ -62,7 +71,7 @@ Artist.create([
   }
 ])
 
-art.create([
+Art.create([
   {
     name: "Name of the piece",
     artist_id: 1,
@@ -179,7 +188,7 @@ Keyword.create([
   }
 ])
 
-artKeyword.create([
+ArtKeyword.create([
   {
     keyword_id: 1,
     art_id: 1
