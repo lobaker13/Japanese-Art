@@ -20,9 +20,11 @@
         <td><%= artist.bio %></td>
         <td><%= artist.dob %></td>
         <td><%= artist.dod %></td>
+      <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Show', artist %></td>
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
         <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
