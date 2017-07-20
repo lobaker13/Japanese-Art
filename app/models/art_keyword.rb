@@ -1,0 +1,2 @@
+class ArtKeyword < ApplicationRecord
+end

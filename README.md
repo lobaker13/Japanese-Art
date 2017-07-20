@@ -23,6 +23,11 @@ in config/environments/devolopments.rb paste the code generated in the terminal
 ```
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
+--In your app.erb paste these alerts--
+```
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+```
 
 --Create a user model through Devise then migrate, default is Admin--
 
@@ -35,9 +40,7 @@ rails db:migrate
 --Scaffold out the tables you want--
 ```
 rails g scaffold artist name:string bio:text dob:integer dod:integer
-
 rails g scaffold art name:string completed_at:date user:belongs_to artist:belongs_to
-
 rails g scaffold lease price:decimal  lease_start_date:date lease_end_date:date art_id:integer client_id:integer user:belongs_to lease:belongs_to
 ```
 
