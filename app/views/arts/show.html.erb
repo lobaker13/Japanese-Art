@@ -11,13 +11,8 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @art.user.full_name %>
-</p>
-
-<p>
   <strong>Artist:</strong>
-  <%= @art.artist.name %>
+  <%= link_to @art.artist.name, artist %>
 </p>
 
 <p>
