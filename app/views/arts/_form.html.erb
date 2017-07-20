@@ -18,17 +18,17 @@
 
   <div class="field">
     <%= form.label :completed_at %>
-    <%= form.date_select :completed_at, id: :art_completed_at %>
+    <%= form.date_select :completed_at, id: :art_completed_at, start_year: 1500, end_year: Date.today.year %>
   </div>
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :art_user_id %>
+    <%= form.select :user_id, options_for_select( User.all.map{|a| [a.full_name, a.id]}) %>
   </div>
 
   <div class="field">
-    <%= form.label :artist_id %>
-    <%= form.text_field :artist_id, id: :art_artist_id %>
+    <%= form.label :artist%>
+    <%= form.select :artist_id, options_for_select( Artist.pluck( :name, :id) ) %>
   </div>
 
  <div class="field">
