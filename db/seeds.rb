@@ -76,7 +76,7 @@ Art.create([
   {
     name: "Name of the piece",
     artist_id: 1,
-    # completed_at:
+    # completed_at: 
   }
 ])
 

@@ -7,17 +7,17 @@
 
 <p>
   <strong>Completed at:</strong>
-  <%= @art.completed_at %>
+  <%= @art.completed_at.year %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @art.user %>
+  <%= @art.user.full_name %>
 </p>
 
 <p>
   <strong>Artist:</strong>
-  <%= @art.artist %>
+  <%= @art.artist.name %>
 </p>
 
 <p>
