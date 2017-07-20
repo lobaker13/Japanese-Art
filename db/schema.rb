@@ -10,7 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720181044) do
+ActiveRecord::Schema.define(version: 20170720181809) do
+
+  create_table "art_keywords", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.integer "dob"
+    t.integer "dod"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "arts", force: :cascade do |t|
+    t.string "name"
+    t.date "completed_at"
+    t.integer "user_id"
+    t.integer "artist_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_arts_on_artist_id"
+    t.index ["user_id"], name: "index_arts_on_user_id"
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string "name"
+    t.integer "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "leases", force: :cascade do |t|
+    t.decimal "price"
+    t.date "lease_start_date"
+    t.date "lease_end_date"
+    t.integer "art_id"
+    t.integer "client_id"
+    t.integer "user_id"
+    t.integer "lease_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lease_id"], name: "index_leases_on_lease_id"
+    t.index ["user_id"], name: "index_leases_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
