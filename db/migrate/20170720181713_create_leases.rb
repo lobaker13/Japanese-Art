@@ -7,7 +7,6 @@ class CreateLeases < ActiveRecord::Migration[5.1]
       t.integer :art_id
       t.integer :client_id
       t.belongs_to :user, foreign_key: true
-      t.belongs_to :lease, foreign_key: true
 
       t.timestamps
     end
