@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create([
+User.create!([
+  {
   fname: "Logan",
   lname: "Baker",
   email: "lobaker13@gmail.com",
-  password: "test",
-
+  password: "password",
+}
   ])
 
 
@@ -28,7 +29,7 @@ Artist.create([
     dod: 2050
   },
   {
-    name: "Utamaro Kitagawa ",
+    name: "Utamaro Kitagawa",
     bio: "Utamaro was a Japanese artist. He is one of the most highly regarded designers of ukiyo-e woodblock prints and paintings, and is best known for his bijin ōkubi-e 'large-headed pictures of beautiful women' of the 1790s.",
     dob: 1753,
     dod: 1806
@@ -56,12 +57,6 @@ Artist.create([
     bio: "Sesshū Tōyō was the most prominent Japanese master of ink and wash painting from the middle Muromachi period. He was born into the samurai Oda family, then brought up and educated to become a Rinzai Zen Buddhist priest.",
     dob: 1420,
     dod: 1506
-  },
-  {
-    name: "Hasegawa Tōhaku",
-    bio: "Hasegawa Tōhaku was a Japanese painter and founder of the Hasegawa school of Japanese painting during the Azuchi–Momoyama period.",
-    dob: 1539,
-    dod: 1610
   },
   {
     name: "Tawaraya Sōtatsu",
