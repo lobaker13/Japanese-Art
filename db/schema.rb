@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20170720181809) do
 
   create_table "arts", force: :cascade do |t|
     t.string "name"
-    t.date "completed_at"
+    t.integer "completed_at"
     t.integer "user_id"
     t.integer "artist_id"
     t.string "image_file_name"

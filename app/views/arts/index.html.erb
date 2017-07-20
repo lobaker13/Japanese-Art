@@ -2,31 +2,12 @@
 
 <h1>Arts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Completed at</th>
-      <th>User</th>
-      <th>Artist</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
     <% @arts.each do |art| %>
-      <tr>
-        <td><%= art.name %></td>
-        <td><%= art.completed_at %></td>
-        <td><%= art.user %></td>
-        <td><%= art.artist %></td>
-        <td><%= link_to 'Show', art %></td>
-        <td><%= link_to 'Edit', edit_art_path(art) %></td>
-        <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <article>
+        <%= link_to image_tag(art.image.url(:medium)), art %>
+      </article>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
