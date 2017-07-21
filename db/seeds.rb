@@ -17,7 +17,7 @@ User.create([
   {
   fname: "Hans",
   lname: "Palacios",
-  email: "hanssebastiam.p@gmail.com",
+  email: "hanssebastian.p@gmail.com",
   password: "password",
   phone: "012-345-6789",
   admin: true
@@ -84,9 +84,58 @@ Artist.create([
 
 Art.create([
   {
-    name: "Name of the piece",
+    name: "Under the Wave off Kanagawa",
+    completed_at: 1832,
     artist_id: 1,
-    # completed_at:
+    image: File.new("#{Rails.root}/images/Hokusai.jpg")
+  },
+  {
+    name: "Memorial portrait of Utagawa Hiroshige",
+    completed_at: 1858,
+    artist_id: 4,
+    image: File.new("#{Rails.root}/images/Hiroshige.jpg")
+  },
+  {
+    name: "Night Rain",
+    completed_at: 1804,
+    artist_id: 3,
+    image: File.new("#{Rails.root}/images/Kitagawa.jpg")
+  },
+  {
+    name: "Of Chinese Lions, Peonies, Skulls and Fountains",
+    completed_at: 2012,
+    artist_id: 2,
+    image: File.new("#{Rails.root}/images/Murakami.jpg")
+  },
+  {
+    name: "Reaching the Source(Ten Ox Herding Pictures)",
+    completed_at: 1982,
+    artist_id: 9,
+    image: File.new("#{Rails.root}/images/Shūbun.jpg")
+  },
+  {
+    name: "Wind God and Thunder God",
+    completed_at: 1650,
+    artist_id: 8,
+    image: File.new("#{Rails.root}/images/Sōtatsu.jpg")
+  },
+  {
+    name: "Mt. Fuji",
+    completed_at: 1898,
+    artist_id: 6,
+    image: File.new("#{Rails.root}/images/Tessai.jpg")
+  },
+  {
+    name: "Tigers and Bamboo",
+    completed_at: 1590,
+    artist_id: 5,
+    image: File.new("#{Rails.root}/images/Tōhaku.jpg")
+  },
+  {
+    name: "Winter landscape",
+    completed_at: 1486,
+    artist_id: 7,
+    image: File.new("#{Rails.root}/images/Tōyō.jpg")
   }
 ])
 

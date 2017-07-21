@@ -54,11 +54,17 @@ class ArtistsController < ApplicationController
   # DELETE /artists/1
   # DELETE /artists/1.json
   def destroy
-    @artist.destroy
-    respond_to do |format|
-      format.html { redirect_to artists_url, notice: 'Artist was successfully destroyed.' }
+    if @artist.destroy
+      flash[:notice] = 'Artist was successfully destroyed.'
+       respond_to do |format|
+      format.html
+      format.js
       format.json { head :no_content }
     end
+    end
+
+   
+
   end
 
   private

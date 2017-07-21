@@ -1,10 +1,10 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= flash[:notice] %></p>
 
-<h1>Arts</h1>
+<h1>Gallery</h1>
 
 
     <% @arts.each do |art| %>
-      <article>
+      <article class="shade">
         <%= link_to image_tag(art.image.url(:medium)), art %>
       </article>
     <% end %>
