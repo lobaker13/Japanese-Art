@@ -17,6 +17,19 @@
   </div>
 
   <div class="field">
+    <%= form.label :category %>
+    <%= form.select :category, options_for_select( Keyword.categories ), {}, id: :category_select %>
+  </div>
+  <% Keyword.categories.each do |(category,index)| %>
+    <div id="category_<%=index %>" class="category_keywords">
+      <% Keyword.where(category: category).each do |keyword|%>
+        <%= form.check_box :keyword_ids, {multiple: true}, keyword.id, nil %>
+        <%= form.label keyword.name %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="field">
     <%= form.label :completed_at %>
     <%= form.text_field :completed_at %>
   </div>
