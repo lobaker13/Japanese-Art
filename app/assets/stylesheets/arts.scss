@@ -6,4 +6,16 @@
 }
 .artshowimg {
 	max-width: 700px;
+	margin: 20px auto;
+}
+.info {
+	margin-top: 100px;
+}
+.shade {
+	a {
+	  &:hover {
+	    background-color: #fff;
+	    opacity:.8;
+	  }
+	}
 }

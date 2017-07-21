@@ -1,0 +1,8 @@
+document.addEventListener("ajax:complete",function(event){
+    console.log(event);
+    if( event.target.classList.contains("delete-artist")) {
+      event.target.parentNode.parentNode.remove();
+    }
+  });
+
+console.log('destroy!')
