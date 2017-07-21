@@ -1,25 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @art.name %>
-</p>
-
-<p>
-  <strong>Completed at:</strong>
-  <%= @art.completed_at.year %>
-</p>
-
-<p>
-  <strong>Artist:</strong>
-  <%= link_to @art.artist.name, artist %>
-</p>
-
-<p>
-  <strong>Image:</strong>
- 	<%= image_tag @art.image.url(:medium) %>
-</p>
-
-
-<%= link_to 'Edit', edit_art_path(@art) %> |
-<%= link_to 'Back', arts_path %>
+<div class="row">
+	<div class="col-md-8">
+		<div class="row artshow">
+			<p id="notice"><%= notice %></p>
+		</div>
+		<div class="row">
+			<p class="artshow">
+			 	<%= image_tag @art.image.url, :class => "artshowimg" %>
+			</p>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="row">
+			<p class="artshow">
+			  <%= @art.name %>
+			</p>
+		</div>
+		<div class="row">
+			<p class="artshow">
+			  <strong>Completed in:</strong>
+			  <%= @art.completed_at %>
+			</p>
+		</div>
+		<div class="row">
+			<p class="artshow">
+			  <strong>Artist:</strong>
+			  <%= link_to @art.artist.name %>
+			</p>
+		</div>
+		<div class="row">
+			<div class="artshow">
+				<%= link_to 'Edit', edit_art_path(@art) %> |
+				<%= link_to 'Back', arts_path %>
+			</div>
+		</div>
+	</div>
+</div>
