@@ -20,6 +20,7 @@
         <td><%= artist.bio %></td>
         <td><%= artist.dob %></td>
         <td><%= artist.dod %></td>
+        <!-- Admin visable only -->
       <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Show', artist %></td>
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
