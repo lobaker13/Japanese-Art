@@ -17,7 +17,7 @@ User.create([
   {
   fname: "Hans",
   lname: "Palacios",
-  email: "hanssebastiam.p@gmail.com",
+  email: "hanssebastian.p@gmail.com",
   password: "password",
   phone: "012-345-6789",
   admin: true
@@ -84,9 +84,11 @@ Artist.create([
 
 Art.create([
   {
-    name: "Name of the piece",
-    artist_id: 1,
-    # completed_at:
+    name: "This is an image",
+    completed_at: 2017,
+    user_id: 1,
+    artist_id: 1
+    #image: File.new("#{rails.root}/path/to/image/my_image.jpg")
   }
 ])
 
@@ -199,13 +201,19 @@ Keyword.create([
   }
 ])
 
-ArtKeyword.create([
-  {
-    keyword_id: 1,
-    art_id: 1
-  },
-  {
-    keyword_id: 2,
-    art_id: 1
-  }
-])
+
+
+Art.find(1).keywords << Keyword.find(1) << Keyword.find(7)
+# arts[0].keywords << Keyword.find(2)
+#
+#
+# ArtKeyword.create([
+#   {
+#     keyword_id: 1,
+#     art_id: 1
+#   },
+#   {
+#     keyword_id: 2,
+#     art_id: 1
+#   },
+# ])

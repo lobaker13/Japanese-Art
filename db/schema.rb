@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20170720181809) do
     t.integer "keyword_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["art_id", "keyword_id"], name: "index_art_keywords_on_art_id_and_keyword_id", unique: true
     t.index ["art_id"], name: "index_art_keywords_on_art_id"
     t.index ["keyword_id"], name: "index_art_keywords_on_keyword_id"
   end
