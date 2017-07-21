@@ -4,11 +4,16 @@
 
 
     <% @arts.each do |art| %>
-      <article class="shade">
-        <%= link_to image_tag(art.image.url(:medium)), art %>
-      </article>
+      <style media="screen">
+    		.art-<%= art.id %> { background-image: url(<%= art.image %>); }
+		  </style>  
+		  <article class=" art art-<%= art.id %>"></article>
     <% end %>
 
 <br>
 
 <%= link_to 'New Art', new_art_path %>
+
+
+
+ 
