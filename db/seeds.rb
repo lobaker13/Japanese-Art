@@ -11,6 +11,7 @@ User.create([
   lname: "Baker",
   email: "lobaker13@gmail.com",
   password: "password",
+  phone: "012-345-6789",
   admin: true
 },
   {
@@ -18,6 +19,7 @@ User.create([
   lname: "Palacios",
   email: "hanssebastiam.p@gmail.com",
   password: "password",
+  phone: "012-345-6789",
   admin: true
 }
   ])
@@ -84,7 +86,7 @@ Art.create([
   {
     name: "Name of the piece",
     artist_id: 1,
-    # completed_at: 
+    # completed_at:
   }
 ])
 
