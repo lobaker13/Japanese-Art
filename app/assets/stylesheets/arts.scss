@@ -16,10 +16,25 @@
 	width: 300px;
 	height: 300px;
 	background-size: cover;
-	a {
-	  &:hover {
-	    background-color: #fff;
-	    opacity:.8;
-	  }
+	margin: 10px;
+  &:hover {
+    background-color: #fff;
+    opacity:.8;
+  }
+
+}
+.artmargin {
+	margin: 20px auto;
+	text-align: center;
+	h2 {
+		font-size: 30px;
+		width: 100%;
 	}
+}
+.artrow {
+	margin: 0 auto;
+}
+.artcol {
+	margin: 0 auto;
+	padding-left: 10%;
 }
