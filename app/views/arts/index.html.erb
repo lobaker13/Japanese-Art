@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= flash[:notice] %></p>
 
-<h1>Arts</h1>
+<h1>Gallery</h1>
 
 
     <% @arts.each do |art| %>
-      <article>
-        <%= link_to image_tag(art.image.url(:medium)), art %>
-      </article>
+      <style media="screen">
+    		.art-<%= art.id %> { background-image: url(<%= art.image %>); }
+		  </style>  
+		  <article class=" art art-<%= art.id %>"></article>
     <% end %>
 
 <br>
 
 <%= link_to 'New Art', new_art_path %>
+
+
+
+ 

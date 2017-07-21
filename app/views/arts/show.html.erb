@@ -4,15 +4,15 @@
 			<p id="notice"><%= notice %></p>
 		</div>
 		<div class="row">
-			<p class="artshow">
+			<p>
 			 	<%= image_tag @art.image.url, :class => "artshowimg" %>
 			</p>
 		</div>
 	</div>
-	<div class="col-md-4">
+	<div class="col-md-4 info">
 		<div class="row">
 			<p class="artshow">
-			  <%= @art.name %>
+			  <strong><%= @art.name %></strong>
 			</p>
 		</div>
 		 <div class="col-md-4">
@@ -43,12 +43,21 @@
 			  <%= link_to @art.artist.name %>
 			</p>
 		</div>
+<<<<<<< HEAD
 		<div class="row">
 			<div class="artshow">
 				<%= link_to 'Edit', edit_art_path(@art) %> |
 				<%= link_to 'Back', arts_path %> |
 				<%= link_to 'Destroy', @art, method: :delete, data: { confirm: 'Are you sure?' } %>
+=======
+		<% if user_signed_in? && current_user.admin? %>
+			<div class="row">
+				<div class="artshow">
+					<%= link_to 'Edit', edit_art_path(@art) %> |
+					<%= link_to 'Back', arts_path %>
+				</div>
+>>>>>>> 400e1a7757eec800fea015157a87389c3db4e29e
 			</div>
-		</div>
+		<% end %>
 	</div>
 </div>

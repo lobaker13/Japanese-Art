@@ -84,11 +84,75 @@ Artist.create([
 
 Art.create([
   {
+<<<<<<< HEAD
     name: "This is an image",
     completed_at: 2017,
     user_id: 1,
     artist_id: 1
     #image: File.new("#{rails.root}/path/to/image/my_image.jpg")
+=======
+    name: "Under the Wave off Kanagawa",
+    completed_at: 1832,
+    artist_id: 1,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Hokusai.jpg")
+  },
+  {
+    name: "Memorial portrait of Utagawa Hiroshige",
+    completed_at: 1858,
+    artist_id: 4,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Hiroshige.jpg")
+  },
+  {
+    name: "Night Rain",
+    completed_at: 1804,
+    artist_id: 3,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Kitagawa.jpg")
+  },
+  {
+    name: "Of Chinese Lions, Peonies, Skulls and Fountains",
+    completed_at: 2012,
+    artist_id: 2,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Murakami.jpg")
+  },
+  {
+    name: "Reaching the Source(Ten Ox Herding Pictures)",
+    completed_at: 1982,
+    artist_id: 9,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Shūbun.jpg")
+  },
+  {
+    name: "Wind God and Thunder God",
+    completed_at: 1650,
+    artist_id: 8,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Sōtatsu.jpg")
+  },
+  {
+    name: "Mt. Fuji",
+    completed_at: 1898,
+    artist_id: 6,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Tessai.jpg")
+  },
+  {
+    name: "Tigers and Bamboo",
+    completed_at: 1590,
+    artist_id: 5,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Tōhaku.jpg")
+  },
+  {
+    name: "Winter landscape",
+    completed_at: 1486,
+    artist_id: 7,
+    user_id: 2,
+    image: File.new("#{Rails.root}/images/Tōyō.jpg")
+>>>>>>> 400e1a7757eec800fea015157a87389c3db4e29e
   }
 ])
 
