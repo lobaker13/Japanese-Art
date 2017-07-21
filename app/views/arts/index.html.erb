@@ -1,21 +1,25 @@
-<p id="notice"><%= flash[:notice] %></p>
-
-<h1>Gallery</h1>
-
-
-    <% @arts.each do |art| %>
-      <style media="screen">
-    		.art-<%= art.id %> { background-image: url(<%= art.image %>); }
-		  </style>  
-		  <%= link_to art do 
-					tag.article "", :class => " art art-#{art.id}"
-		  	end %>
-    <% end %>
-
-<br>
-
-<%= link_to 'New Art', new_art_path %>
-
-
+<div class="row artrow">
+	<div class="col-md-12 artcol">
+		<div class="row artmargin ">
+			<p id="notice"><%= flash[:notice] %></p>
+		</div>
+		<div class="row artmargin ">
+			<h2>Gallery</h2>
+		</div>
+		<div class="row artmargin">
+		    <% @arts.each do |art| %>
+		      <style media="screen">
+		    		.art-<%= art.id %> { background-image: url(<%= art.image %>); }
+				  </style>  
+				  <%= link_to art do 
+							tag.article "", :class => " art art-#{art.id}"
+				  	end %>
+		    <% end %>
+		</div>
+		<div class="row artmargin ">
+			<%= link_to 'New Art', new_art_path %>
+		</div>
+	</div>
+</div>
 
  
