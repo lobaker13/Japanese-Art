@@ -1,5 +1,7 @@
 <h1>Welcome!</h2>
-
+<% if user_signed_in? %>
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<% end %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
