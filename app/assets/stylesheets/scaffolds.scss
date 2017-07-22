@@ -18,17 +18,20 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
-
+// Background color for nav bar
+nav {
+  a {
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+  }
+}
 a {
   color: #000;
 
   &:visited {
     color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
   }
 }
 
