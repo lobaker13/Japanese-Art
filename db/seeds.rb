@@ -84,13 +84,6 @@ Artist.create([
 
 Art.create([
   {
-<<<<<<< HEAD
-    name: "This is an image",
-    completed_at: 2017,
-    user_id: 1,
-    artist_id: 1
-    #image: File.new("#{rails.root}/path/to/image/my_image.jpg")
-=======
     name: "Under the Wave off Kanagawa",
     completed_at: 1832,
     artist_id: 1,
@@ -152,76 +145,49 @@ Art.create([
     artist_id: 7,
     user_id: 2,
     image: File.new("#{Rails.root}/images/Tōyō.jpg")
->>>>>>> 400e1a7757eec800fea015157a87389c3db4e29e
   }
 ])
 
 Keyword.create([
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  #
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-  # {
-  #   name: "",
-  #   category: :movement
-  # },
-
   {
-    name: "painting",
+    name: "Oil Paint",
     category: :medium
   },
   {
-    name: "pottery",
+    name: "Acrylic Paint",
     category: :medium
   },
   {
-    name: "pottery",
+    name: "Pastel",
     category: :medium
   },
   {
-    name: "pottery",
+    name: "Pencil",
     category: :medium
   },
   {
-    name: "sculpture",
+    name: "Watercolor",
     category: :medium
+  },
+  {
+    name: "Canvas",
+    category: :medium
+  },
+  {
+    name: "Silk",
+    category: :base
+  },
+  {
+    name: "Linen",
+    category: :base
+  },
+  {
+    name: "Blended Fabric",
+    category: :base
+  },
+  {
+    name: "Paper",
+    category: :base
   },
   {
     name: "Formative",
@@ -267,7 +233,15 @@ Keyword.create([
 
 
 
-Art.find(1).keywords << Keyword.find(1) << Keyword.find(7)
+Art.find(1).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(11)
+Art.find(2).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(12)
+Art.find(3).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(13)
+Art.find(4).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(14)
+Art.find(5).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(15)
+Art.find(6).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(16)
+Art.find(7).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(17)
+Art.find(8).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(18)
+Art.find(9).keywords << Keyword.find(1) << Keyword.find(5) << Keyword.find(19)
 # arts[0].keywords << Keyword.find(2)
 #
 #
