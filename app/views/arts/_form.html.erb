@@ -20,6 +20,7 @@
     <%= form.label :category %>
     <%= form.select :category, options_for_select( Keyword.categories ), {}, id: :category_select %>
   </div>
+  <!-- Loop to find my enums within enums!!! Inception nums! -->
   <% Keyword.categories.each do |(category,index)| %>
     <div id="category_<%=index %>" class="category_keywords">
       <% Keyword.where(category: category).each do |keyword|%>
