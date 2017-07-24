@@ -22,15 +22,16 @@
   <%= form.select :category, options_for_select( Keyword.categories ), {}, id: :category_select %>
 </div>
 <!-- Loop to find my enums within enums!!! Inception nums! -->
+<div id="keywords">
 <% Keyword.categories.each do |(category,index)| %>
-<div id="category_<%=index %>" class="category_keywords">
+<div id="category_<%=index %>" class="category_keywords<%= " active" if index == 0 %>">
   <% Keyword.where(category: category).each do |keyword|%>
-  <%= form.check_box :keyword_ids, {}, keyword.id, nil %>
+  <%= form.check_box :keyword_ids, {multiple: true, class: :keyword_checkbox}, keyword.id, nil %>
   <%= form.label keyword.name %>
   <% end %>
 </div>
 <% end %>
-
+</div>
 <div class="field">
   <%= form.label :completed_at, "Date Completed" %>
   <%= form.text_field :completed_at %>

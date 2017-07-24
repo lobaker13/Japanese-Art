@@ -48,8 +48,23 @@ class ArtsController < ApplicationController
   # PATCH/PUT /arts/1
   # PATCH/PUT /arts/1.json
   def update
+    last_edit = @art.updated_at
+    Art.transaction do
+      @art.update(art_params)
+      active_keyword_ids = @art.keywords.map{|k| k.id}
+      new_keyword_ids = params[:art][:keyword_ids].map{|k_id| k_id.to_i}
+      # remove keywords were in the database that weren't requested
+      (active_keyword_ids - new_keyword_ids).each do |k_id|
+        p k_id
+        ArtKeyword.find_by(art_id: @art.id, keyword_id: k_id ).delete
+      end
+      # add keywords that aren't already in the database
+      (new_keyword_ids - active_keyword_ids).each do |k_id|
+        ArtKeyword.create(art_id: @art.id, keyword_id: k_id )
+      end
+    end
     respond_to do |format|
-      if @art.update(art_params)
+      if last_edit < @art.updated_at
         format.html { redirect_to @art, notice: 'Art was successfully updated.' }
         format.json { render :show, status: :ok, location: @art }
       else

@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170720181809) do
 
-  create_table "art_keywords", id: false, force: :cascade do |t|
+  create_table "art_keywords", force: :cascade do |t|
     t.integer "art_id"
     t.integer "keyword_id"
     t.datetime "created_at", null: false
