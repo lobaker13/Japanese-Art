@@ -1,4 +1,4 @@
 class Lease < ApplicationRecord
   belongs_to :user
-  belongs_to :lease
+  belongs_to :art 
 end
