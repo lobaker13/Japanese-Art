@@ -25,9 +25,9 @@ class LeasesController < ApplicationController
   # POST /leases.json
   def create
     @lease = Lease.new(lease_params)
-
+    @lease.user_id = current_user.id
     respond_to do |format|
-      if @lease.save
+      if @lease.save!
         format.html { redirect_to @lease, notice: 'Lease was successfully created.' }
         format.json { render :show, status: :created, location: @lease }
       else
