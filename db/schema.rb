@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20170720181809) do
     t.string "last_sign_in_ip"
     t.string "fname"
     t.string "lname"
-    t.integer "phone"
+    t.string "phone"
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

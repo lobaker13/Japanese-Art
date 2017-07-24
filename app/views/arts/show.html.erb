@@ -5,55 +5,61 @@
 </div>
 <div class="row">
 	<div class="col-md-8">
-			 	<%= image_tag @art.image.url, :class => "artshowimg" %>
+		<%= image_tag @art.image.url, :class => "artshowimg" %>
 	</div>
 	<div class="col-md-4 info">
 		<div class="row">
 			<div class="col-md-12">
+
 				<h3 class="artshow"><strong><%= @art.name %></strong></h3>
+
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-			 <% Keyword.categories.each do |(category,index)|
+				<% Keyword.categories.each do |(category,index)|
 				  keywords = @art.keywords.select{|k| k.category == category }
 					next if keywords.empty? %>
 				<div class="artshow">
-					 <h3><%= category %></h3>
-					 <h5><%= keywords[0].name %></h5>
+					<h3><%= category %></h3>
+					<h5><%= keywords[0].name %></h5>
 				</div>
 				<% end %>
 			</div>
 		</div>
 		<div class="row">
 			<p class="artshow">
-				  <%# link_to @art.keywords.where(category: ) %>
+				<%# link_to @art.keywords.where(category: ) %>
 			</p>
 		</div>
 		<div class="row">
 			<p class=" col-md-12 artshow">
-			  <strong>Completed in:</strong>
-			  <%= @art.completed_at %>
+				<strong>Completed in:</strong>
+				<%= @art.completed_at %>
 			</p>
 		</div>
 		<div class="row">
 			<p class=" col-md-12 artshow">
-			  <strong>Artist:</strong>
-			  <%= link_to @art.artist.name %>
+				<strong>Artist:</strong>
+				<%= link_to @art.artist.name %>
 			</p>
 		</div>
 		<div class="row">
 			<div class=" col-md-12 artshow">
 				<% if user_signed_in? && current_user.admin? %>
-				<%= link_to 'Edit', edit_art_path(@art) %> |
-				<%= link_to 'Back', arts_path %> |
+				<%= link_to 'Edit', edit_art_path(@art) %>
+				|
+				<%= link_to 'Back', arts_path %>
+				|
 				<%= link_to 'Destroy', @art, method: :delete, data: { confirm: 'Are you sure?' } %>
 				<% end %>
 			</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<%= link_to 'Lease Artpiece', new_lease_path, :id => 'button' %>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<%= link_to 'Lease Artpiece', new_lease_path, :id => 'button' %>
+			</div>
+
 		</div>
 	</div>
-</div>
