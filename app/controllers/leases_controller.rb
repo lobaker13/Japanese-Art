@@ -15,10 +15,20 @@ class LeasesController < ApplicationController
   # GET /leases/new
   def new
     @lease = Lease.new
+    unless user_signed_in? 
+      flash[:notice] = "You don't have access to that page!"
+      redirect_to root_path
+      return
+    end
   end
 
   # GET /leases/1/edit
   def edit
+    unless user_signed_in? && current_user.admin?
+      flash[:notice] = "You don't have access to that page!"
+      redirect_to root_path
+      return
+    end
   end
 
   # POST /leases

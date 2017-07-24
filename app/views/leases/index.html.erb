@@ -8,7 +8,9 @@
         <th class="color">Lease start date</th>
         <th class="color">Lease end date</th>
         <th class="color">Art</th>
+        <% if user_signed_in? && current_user.admin? %>
         <th class="color">Client</th>
+        <% end %>
         <th colspan="3"></th>
       </tr>
     </thead>
