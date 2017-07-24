@@ -17,10 +17,11 @@
 				  	end %>
 		    <% end %>
 		</div>
-		<div class="row artmargin ">
-			<% if user_signed_in? && current_user.admin? %>
-			<%= link_to 'New Art', new_art_path %>
-			<% end %>
-		</div>
+
+		<% if user_signed_in? && current_user.admin? %>
+			<div class="row artmargin ">
+				<%= link_to 'New Art', new_art_path %>
+			</div>
+		<% end %>
 	</div>
 </div>
