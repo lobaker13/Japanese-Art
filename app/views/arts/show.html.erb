@@ -10,21 +10,16 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
 				<% Keyword.categories.each do |(category,index)|
 				  keywords = @art.keywords.select{|k| k.category == category }
 					next if keywords.empty? %>
-				<div class="artshow">
-					<h3><%= category %></h3>
-					<h5><%= keywords[0].name %></h5>
+				<div class=" col-md-12 artshow">
+					<p>
+						<strong><%= category %>:</strong>
+						<%= keywords[0].name %>
+					</p>
 				</div>
 				<% end %>
-			</div>
-		</div>
-		<div class="row">
-			<p class="artshow">
-				<%# link_to @art.keywords.where(category: ) %>
-			</p>
 		</div>
 		<div class="row">
 			<p class=" col-md-12 artshow">
@@ -41,14 +36,13 @@
 		<div class="row">
 			<div class=" col-md-12 artshow">
 				<% if user_signed_in? && current_user.admin? %>
-				<%= link_to 'Edit', edit_art_path(@art) %>
-				|
-				<%= link_to 'Back', arts_path %>
-				|
+				<%= link_to 'Edit', edit_art_path(@art) %> 
+				| 
+				<%= link_to 'Back', arts_path %> 
+				| 
 				<%= link_to 'Destroy', @art, method: :delete, data: { confirm: 'Are you sure?' } %>
 				<% end %>
 			</div>
-
 		</div>
 		<div class="row">
 			<div class="col-md-12">
