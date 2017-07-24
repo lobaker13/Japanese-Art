@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#homeimg { 
+#homeimg {
 	background: image-url("Sotatsu.jpg");
 	width: 100%;
 	height: 200px;
@@ -14,7 +14,8 @@
 		margin: 0 auto;
 		width: 600px;
 		text-align: center;
-		
+		font-size: 45px;
+
 	}
 }
 a {

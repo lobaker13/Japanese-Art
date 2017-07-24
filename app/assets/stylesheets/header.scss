@@ -8,7 +8,12 @@ header {
 }
 
 nav {
-margin-left: 300px;
+margin-left: 200px;
+font-family: 'Handlee';
+	a{
+		display: inline-block;
+	  height: 45px;
+	}
 }
 
 .logo {
@@ -47,7 +52,7 @@ li.home:after{
   transform-origin: center bottom;
   transform: rotateX(90deg);
 }
-li.home:hover{
+a:hover li.home{
 	cursor: default;
   transform-origin: center bottom;
   transform: rotateX(-90deg) translateY(100%);
@@ -79,7 +84,7 @@ li.artists:after{
   transform-origin: center bottom;
   transform: rotateX(90deg);
 }
-li.artists:hover{
+a:hover li.artists{
   transform-origin: center bottom;
   transform: rotateX(-90deg) translateY(100%);
 }
@@ -110,7 +115,7 @@ li.gallery:after{
   transform-origin: center bottom;
   transform: rotateX(90deg);
 }
-li.gallery:hover{
+a:hover li.gallery{
   transform-origin: center bottom;
   transform: rotateX(-90deg) translateY(100%);
 }
@@ -141,7 +146,7 @@ li.lease:after{
   transform-origin: center bottom;
   transform: rotateX(90deg);
 }
-li.lease:hover{
+a:hover li.lease{
   transform-origin: center bottom;
   transform: rotateX(-90deg) translateY(100%);
 }
