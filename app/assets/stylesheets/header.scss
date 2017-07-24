@@ -42,6 +42,7 @@ li.home:after{
   transform: rotateX(90deg);
 }
 li.home:hover{
+	cursor: default;
   transform-origin: center bottom;
   transform: rotateX(-90deg) translateY(100%);
 }

@@ -150,6 +150,10 @@ Art.create([
 
 Keyword.create([
   {
+    name: "Photograph",
+    category: :medium
+  },
+  {
     name: "Oil Paint",
     category: :medium
   },
@@ -228,7 +232,32 @@ Keyword.create([
   {
     name: "Modern",
     category: :period
-  }
+  },
+  {
+    name: "Impressionism",
+    category: :movement
+  },
+  {
+    name: "Cubism",
+    category: :movement
+  },
+  {
+    name: "Fauvism",
+    category: :movement
+  },
+  {
+    name: "Surrealism",
+    category: :movement
+  },
+  {
+    name: "Pop Art",
+    category: :movement
+  },
+  {
+    name: "Dadaism",
+    category: :movement
+  },
+
 ])
 
 
