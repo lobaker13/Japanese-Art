@@ -1,24 +1,65 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @artist.bio %>
-</p>
-
-<p>
-  <strong>Dob:</strong>
-  <%= @artist.dob %>
-</p>
-
-<p>
-  <strong>Dod:</strong>
-  <%= @artist.dod %>
-</p>
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<div id="artistshow">
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6 links">
+			<h2>Artist Info</h2>
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-1">
+			<p><strong>Name:</strong></p>
+		</div>
+		<div class="col-md-5">
+			<p><%= @artist.name %></p>
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-1">
+			<p><strong>Bio:</strong></p>
+		</div>
+		<div class="col-md-5">
+			<p><%= @artist.bio %></p>
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-1">
+			<p><strong>Dob:</strong></p>
+	  </div>
+		<div class="col-md-5">
+	  	<p><%= @artist.dob %></p>
+	  </div>
+	  <div class="col-md-3">
+	  </div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-1">
+			<p><strong>Dod:</strong></p>
+		</div>
+		<div class="col-md-5">
+	  	<p><%= @artist.dod %></p>
+	  </div>
+	  <div class="col-md-3">
+	  </div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6 links">
+			<%= link_to 'Edit', edit_artist_path(@artist) %> |
+			<%= link_to 'Back', artists_path %>
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+</div>

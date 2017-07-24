@@ -1,34 +1,67 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @lease.price %>
-</p>
-
-<p>
-  <strong>Lease start date:</strong>
-  <%= @lease.lease_start_date %>
-</p>
-
-<p>
-  <strong>Lease end date:</strong>
-  <%= @lease.lease_end_date %>
-</p>
-
-<p>
-  <strong>Art:</strong>
-  <%= @lease.art_id %>
-</p>
-
-<p>
-  <strong>Client:</strong>
-  <%= @lease.client_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @lease.user %>
-</p>
-
-<%= link_to 'Edit', edit_lease_path(@lease) %> |
-<%= link_to 'Back', leases_path %>
+<div id="artistshow">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 links">
+      <h2>Lease Info</h2>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <p><strong>Art:</strong></p>
+    </div>
+    <div class="col-md-4">
+      <p><%= @lease.art.name %></p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <p><strong>Lease start date:</strong></p>
+    </div>
+    <div class="col-md-4">
+      <p><%= @lease.lease_start_date %></p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <p><strong>Lease end date:</strong></p>
+    </div>
+    <div class="col-md-4">
+      <p><%= @lease.lease_end_date %></p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <p><strong>Price:</strong></p>
+    </div>
+    <div class="col-md-4">
+      <p><%= @lease.price %></p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <p><strong>Client:</strong></p>
+    </div>
+    <div class="col-md-4">
+      <p><%= @lease.user.full_name %></p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 links">
+      <%= link_to 'Edit', edit_lease_path(@lease) %> |
+      <%= link_to 'Back', leases_path %>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
