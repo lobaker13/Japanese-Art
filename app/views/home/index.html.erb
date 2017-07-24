@@ -5,10 +5,14 @@
     end %>
   </div>
 </div>
-<div id="signin">
   <% if user_signed_in? %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  <div class="row">
+    <div class="col-md-12 signout">
+       <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :id => 'button' %>
+    </div>
+  </div>
   <% else %>
+  <div id="signin">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
@@ -31,8 +35,8 @@
         <%= f.submit "Log in" %>
       </div>
       <% end %>
-
+  <%= render "devise/shared/links" %>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+
 </div>
