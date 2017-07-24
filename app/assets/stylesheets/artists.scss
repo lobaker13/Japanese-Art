@@ -1,3 +1,24 @@
-table{
-  display: block;
+
+.artist_table{
+  color:#fff;
 }
+.artist_info{
+  padding:5px;
+  color: #fff;
+}
+  .name{
+    padding:2px;
+    background-color: #2c0808
+  }
+  .bio{
+    padding:2px;
+    background-color: #3f0b0b;
+  }
+  .dob{
+    padding:2px;
+    background-color: #711414;
+  }
+  .dod{
+    padding:2px;
+    background-color: #9b1b1b;
+  }
