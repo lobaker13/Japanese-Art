@@ -1,4 +1,5 @@
-document.addEventListener("turbolinks:load",function(){
+//document.addEventListener("turbolinks:load",function(){
+document.addEventListener("DOMContentLoaded",function(){
   let elCategorySelect = document.getElementById("category_select");
   if( elCategorySelect ) {
     elCategorySelect.addEventListener("change",function(event){
