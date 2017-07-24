@@ -17,10 +17,9 @@
 				  	end %>
 		    <% end %>
 		</div>
-		<% if user_signed_in? && current_user.admin? %>
-			<div class="row artmargin ">
-				<%= link_to 'New Art', new_art_path %>
+
+			<div class="upload_link ">
+				<%= link_to 'Upload a New Piece', new_art_path %>
 			</div>
-		<% end %>
 	</div>
 </div>
