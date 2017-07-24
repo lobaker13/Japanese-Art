@@ -1,0 +1,141 @@
+header {
+	width: 100%;
+	height: 150px;
+	border-bottom: 2px solid black;
+	background: linear-gradient(to right, #000000, #a51d1d);
+
+
+}
+
+nav {
+margin-left: 200px;
+}
+
+.logo {
+	width: 85px;
+	margin-left: -48%;
+	margin-top:1%;
+}
+
+li.home{
+  border: none;
+  // background: cadetblue;
+  color: #fff;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+}
+li.home:after{
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  // background: firebrick;
+  border-radius: 10px;
+  content: 'Home';
+  font-size: 1.0em;
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+li.home:hover{
+	cursor: default;
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+}
+
+// For the artist nav
+
+li.artists{
+  border: none;
+  // background: cadetblue;
+  color: #fff;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+}
+li.artists:after{
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  // background: firebrick;
+  border-radius: 10px;
+  content: 'Artists';
+  font-size: 1.0em;
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+li.artists:hover{
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+}
+
+// for the galley nav
+
+li.gallery{
+  border: none;
+  // background: cadetblue;
+  color: #fff;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+}
+li.gallery:after{
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  // background: firebrick;
+  border-radius: 10px;
+  content: 'Gallery';
+  font-size: 1.0em;
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+li.gallery:hover{
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+}
+
+// for the leasing page
+
+li.lease{
+  border: none;
+  // background: cadetblue;
+  color: #fff;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+}
+li.lease:after{
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  // background: firebrick;
+  border-radius: 10px;
+  content: 'Lease';
+  font-size: 1.0em;
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+li.lease:hover{
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+}

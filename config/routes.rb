@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  root 'home#index'
   resources :keywords
   resources :leases
   resources :arts
   resources :artists
-  devise_for :users
-  root 'home#index'
+  devise_for :users, :controllers => { registrations: 'registrations'}
+
+  get '/users(.:format)' => 'users#index'
 end
 
 =begin
