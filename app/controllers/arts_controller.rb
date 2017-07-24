@@ -16,10 +16,20 @@ class ArtsController < ApplicationController
   # GET /arts/new
   def new
     @art = Art.new
+    unless session[:user_signed_in] == current_user.admin
+      flash[:notice] = "You don't have access to that page!"
+      redirect_to root_path
+      return
+    end
   end
 
   # GET /arts/1/edit
   def edit
+    unless session[:user_signed_in] == current_user.admin
+      flash[:notice] = "You don't have access to that page!"
+      redirect_to root_path
+      return
+    end
   end
 
   # POST /arts
