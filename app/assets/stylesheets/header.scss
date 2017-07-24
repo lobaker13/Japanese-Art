@@ -8,18 +8,28 @@ header {
 }
 
 nav {
+<<<<<<< HEAD
 margin-left: 200px;
 font-family: 'Handlee';
 	a{
 		display: inline-block;
 	  height: 45px;
 	}
+=======
+margin-left: 300px;
+>>>>>>> 7cd492976f7c035ba34109e0e6de165d85f0d6a4
 }
 
 .logo {
 	width: 85px;
-	margin-left: -48%;
-	margin-top:1%;
+	margin-left: -82%;
+	margin-top:10%;
+}
+h1 {
+  width: 400px;
+  margin-left: -82%;
+  margin-top:10%;
+  color: white;
 }
 
 li.home{
