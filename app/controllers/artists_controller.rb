@@ -15,7 +15,7 @@ class ArtistsController < ApplicationController
   # GET /artists/new
   def new
     @artist = Artist.new
-    unless session[:user_signed_in] == current_user.admin
+    unless user_signed_in? && current_user.admin?
       flash[:notice] = "You don't have access to that page!"
       redirect_to root_path
       return
@@ -24,7 +24,7 @@ class ArtistsController < ApplicationController
 
   # GET /artists/1/edit
   def edit
-    unless session[:user_signed_in] == current_user.admin
+    unless user_signed_in? && current_user.admin?
       flash[:notice] = "You don't have access to that page!"
       redirect_to root_path
       return
