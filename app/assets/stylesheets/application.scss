@@ -15,6 +15,9 @@
  */
 @import 'https://fonts.googleapis.com/css?family=Calligraffitti';
 @import 'https://fonts.googleapis.com/css?family=Handlee';
+@import 'https://fonts.googleapis.com/css?family=Gilda+Display';
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -51,4 +54,9 @@ ul {
 }
 .field {
 	margin-bottom: 20px;
+}
+.flash, .notice {
+	width: 100%;
+	text-align: center;
+	margin: 20px auto;
 }
