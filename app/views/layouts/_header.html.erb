@@ -17,8 +17,9 @@
 				<a href="/artists"><li class="artists">アーティスト</li></a>
         <!-- gallery -->
 				<a href="/arts"><li class="gallery">ギャラリー</li></a>
-        <!-- lease -->
+        <% if user_signed_in? && current_user.admin? %>
         <a href="/leases"><li class="lease">リース</li></a>
+        <% end %>
 			</ul>
 		</nav>
  	</div>
