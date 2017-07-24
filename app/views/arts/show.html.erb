@@ -1,55 +1,59 @@
 <div class="row">
+	<div class="row artshow">
+		<p id="notice"><%= notice %></p>
+	</div>
+</div>
+<div class="row">
 	<div class="col-md-8">
-		<div class="row artshow">
-			<p id="notice"><%= notice %></p>
-		</div>
-		<div class="row">
-			<p>
 			 	<%= image_tag @art.image.url, :class => "artshowimg" %>
-			</p>
-		</div>
 	</div>
 	<div class="col-md-4 info">
 		<div class="row">
-			<p class="artshow">
-			  <strong><%= @art.name %></strong>
-			</p>
+			<div class="col-md-12">
+				<h4 class="artshow"><strong><%= @art.name %></strong></h4>
+			</div>
 		</div>
-		 <div class="col-md-4">
+		<div class="row">
+			<div class="col-md-12">
 			 <% Keyword.categories.each do |(category,index)|
 				  keywords = @art.keywords.select{|k| k.category == category }
 					next if keywords.empty? %>
-			 <div class="row">
-				 <p class="artshow">
+				<div class="artshow">
 					 <h3><%= category %></h3>
 					 <h5><%= keywords[0].name %></h5>
-				 </p>
-			 </div>
-			 <% end %>
-			<div class="row">
-				<p class="artshow">
-				  <%# link_to @art.keywords.where(category: ) %>
-				</p>
+				</div>
+				<% end %>
 			</div>
+		</div>
 		<div class="row">
 			<p class="artshow">
+				  <%# link_to @art.keywords.where(category: ) %>
+			</p>
+		</div>
+		<div class="row">
+			<p class=" col-md-12 artshow">
 			  <strong>Completed in:</strong>
 			  <%= @art.completed_at %>
 			</p>
 		</div>
 		<div class="row">
-			<p class="artshow">
+			<p class=" col-md-12 artshow">
 			  <strong>Artist:</strong>
 			  <%= link_to @art.artist.name %>
 			</p>
 		</div>
 		<div class="row">
-			<div class="artshow">
+			<div class=" col-md-12 artshow">
 				<% if user_signed_in? && current_user.admin? %>
 				<%= link_to 'Edit', edit_art_path(@art) %> |
 				<%= link_to 'Back', arts_path %> |
 				<%= link_to 'Destroy', @art, method: :delete, data: { confirm: 'Are you sure?' } %>
 				<% end %>
 			</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<%= link_to 'Lease Artpiece', new_lease_path, :id => 'leaseart' %>
+		</div>
 	</div>
 </div>

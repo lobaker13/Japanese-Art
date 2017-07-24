@@ -1,16 +1,24 @@
 // Place all the styles related to the arts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.artshow {
-	margin: 20px auto 10px auto;
-}
-.artshowimg {
-	max-width: 700px;
-	margin: 20px auto;
-}
+
 .info {
 	margin-top: 100px;
+	width: 800px;
+	text-align: center;
+	.artshow {
+	margin: 20px auto;
+	text-align: center;
+	width: 400px;
+	a {
+			text-decoration: underline;
+		}
+	}
 }
+.artshowimg {
+		max-width: 700px;
+		margin: 20px auto;
+	}
 .art {
 	display: inline-block;
 	width: 300px;
@@ -37,5 +45,9 @@
 .artcol {
 	margin: 0 auto;
 	padding-left: 7%;
-
+}
+#leaseart {
+	border: 2px solid rgba(200,10,10,.2);
+	background: linear-gradient(rgba(100,100,100,0), rgba(100,100,100,.5));
+	padding: 10px;
 }
