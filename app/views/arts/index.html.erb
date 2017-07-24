@@ -9,9 +9,10 @@
 		<div class="row artmargin">
 		    <% @arts.each do |art| %>
 		      <style media="screen">
+          /*applying css within erb statement, '-' = # of art, defined in class*/
 		    		.art-<%= art.id %> { background-image: url(<%= art.image %>); }
-				  </style>  
-				  <%= link_to art do 
+				  </style>
+				  <%= link_to art do
 							tag.article "", :class => " art art-#{art.id}"
 				  	end %>
 		    <% end %>
@@ -21,5 +22,3 @@
 		</div>
 	</div>
 </div>
-
- 
