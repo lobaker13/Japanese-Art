@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Artists</h1>
-
 <table>
   <thead>
     <h2 class="artist_h2">Artists</h2>
@@ -23,9 +21,9 @@
         <td class="dod"><%= artist.dod %></td>
         <!-- Admin visable only -->
       <% if user_signed_in? && current_user.admin? %>
-        <td><%= link_to 'Show', artist %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to "Destroy", artist, method: :delete, remote:true,data: { confirm: 'Are you sure?' }, :class => "delete-artist" %></td>
+        <td><%= link_to 'Show', artist, :class => "color" %></td>
+        <td><%= link_to 'Edit', edit_artist_path(artist), :class => "color" %></td>
+        <td><%= link_to "Destroy", artist, method: :delete, remote:true,data: { confirm: 'Are you sure?' }, :class => "delete-artist color" %></td>
       <% end %>
       </tr>
     <% end %>
@@ -34,5 +32,13 @@
 
 <br>
 <% if user_signed_in? && current_user.admin? %>
-<%= link_to 'New Artist', new_artist_path %>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-2">
+    <%= link_to 'New Artist', new_artist_path, :id => 'button' %>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
 <% end %>

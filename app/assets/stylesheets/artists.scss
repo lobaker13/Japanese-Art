@@ -1,31 +1,45 @@
 
 .artist_table{
-  color:black;
+  color:#000;
 }
 .artist_info{
   padding:5px;
   color: #fff;
 }
   .name{
-    padding:2px;
-    background-color: #2c0808
+    padding:5px;
+    background-color: #2c0808;
   }
   .bio{
-    padding:2px;
+    padding:5px;
     background-color: #3f0b0b;
   }
   .dob{
-    padding:2px;
+    padding:5px;
     background-color: #711414;
+    text-align: center;
   }
   .dod{
-    padding:2px;
+    padding:5px;
     background-color: #9b1b1b;
+    text-align: center;
   }
 .artist_h2{
+  margin-top: 100px;
+  margin-bottom: 50px;
   text-align: center;
   font-size: 40px;
 }
 .color {
   color: black;
+  margin-left: 20px;
+}
+#artistshow {
+  margin: 0 auto;
+  .links {
+    text-align: center;
+  }
+  .row {
+    margin-top: 10px;
+  }
 }
