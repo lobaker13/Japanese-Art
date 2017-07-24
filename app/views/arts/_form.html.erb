@@ -1,56 +1,57 @@
 <%= form_with(model: art, local: true, html: {multipart: true}) do |form| %>
-  <% if art.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(art.errors.count, "error") %> prohibited this art from being saved:</h2>
+<% if art.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(art.errors.count, "error") %>
+    prohibited this art from being saved:</h2>
 
-      <ul>
-      <% art.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <ul>
+    <% art.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= form.label :name %>
+  <%= form.text_field :name, id: :art_name %>
+</div>
+
+<div class="field">
+  <%= form.label :category %>
+  <%= form.select :category, options_for_select( Keyword.categories ), {}, id: :category_select %>
+</div>
+<!-- Loop to find my enums within enums!!! Inception nums! -->
+<% Keyword.categories.each do |(category,index)| %>
+<div id="category_<%=index %>" class="category_keywords">
+  <% Keyword.where(category: category).each do |keyword|%>
+  <%= form.check_box :keyword_ids, {}, keyword.id, nil %>
+  <%= form.label keyword.name %>
   <% end %>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :art_name %>
-  </div>
+<div class="field">
+  <%= form.label :completed_at, "Date Completed" %>
+  <%= form.text_field :completed_at %>
+</div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.select :category, options_for_select( Keyword.categories ), {}, id: :category_select %>
-  </div>
-  <!-- Loop to find my enums within enums!!! Inception nums! -->
-  <% Keyword.categories.each do |(category,index)| %>
-    <div id="category_<%=index %>" class="category_keywords">
-      <% Keyword.where(category: category).each do |keyword|%>
-        <%= form.check_box :keyword_ids, {multiple: true}, keyword.id, nil %>
-        <%= form.label keyword.name %>
-      <% end %>
-    </div>
-  <% end %>
+<div class="field">
+  <%= form.label :user_id %>
+  <%= form.select :user_id, options_for_select( User.all.map{|a| [a.full_name, a.id]}) %>
+</div>
 
-  <div class="field">
-    <%= form.label :completed_at, "Date Completed" %>
-    <%= form.text_field :completed_at %>
-  </div>
+<div class="field">
+  <%= form.label :artist%>
+  <%= form.select :artist_id, options_for_select( Artist.pluck( :name, :id) ) %>
+</div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.select :user_id, options_for_select( User.all.map{|a| [a.full_name, a.id]}) %>
-  </div>
+<div class="field">
+  <%= form.label :image %>
+  <%= form.file_field :image %>
+</div>
 
-  <div class="field">
-    <%= form.label :artist%>
-    <%= form.select :artist_id, options_for_select( Artist.pluck( :name, :id) ) %>
-  </div>
-
- <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="actions">
+  <%= form.submit %>
+</div>
 <% end %>
