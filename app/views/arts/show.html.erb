@@ -44,10 +44,11 @@
 				<% end %>
 			</div>
 		</div>
+		<% if user_signed_in? %>
 		<div class="row">
 			<div class="col-md-12">
 				<%= link_to 'Lease Artpiece', new_lease_path, :id => 'button' %>
 			</div>
-
 		</div>
+		<% end %>
 	</div>
