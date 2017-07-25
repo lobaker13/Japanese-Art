@@ -1,0 +1,47 @@
+
+<table>
+  <thead>
+    <h2 class="marginheading">List of Users</h2>
+    <tr class="user_table">
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Phone Number</th>
+      <th>Admin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr class="user_info">
+        <td><%= user.fname %></td>
+        <td><%= user.lname %></td>
+        <td><%= user.email %></td>
+        <td><%= user.password %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.admin %></td>
+        <!-- Admin visable only -->
+      <% if user_signed_in? && current_user.admin? %>
+        <td><%= link_to 'Show', user, :class => "color" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), :class => "color" %></td>
+        <td><%= link_to "Destroy", user, method: :delete, remote:true,data: { confirm: 'Are you sure?' }, :class => "color" %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if user_signed_in? && current_user.admin? %>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-2">
+    <%= link_to 'New User', new_user_path, :id => 'button' %>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
+<% end %>

@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :artist_name %>
+    <%= form.text_field :name, id: :artist_name, :required => true %>
   </div>
 
   <div class="field">
     <%= form.label :bio %>
-    <%= form.text_area :bio, id: :artist_bio %>
+    <%= form.text_area :bio, id: :artist_bio, :required => true %>
   </div>
 
   <div class="field">
     <%= form.label :dob %>
-    <%= form.number_field :dob, id: :artist_dob %>
+    <%= form.number_field :dob, id: :artist_dob, :required => true %>
   </div>
 
   <div class="field">
     <%= form.label :dod %>
-    <%= form.number_field :dod, id: :artist_dod %>
+    <%= form.number_field :dod, id: :artist_dod, :required => true %>
   </div>
 
   <div class="actions">
