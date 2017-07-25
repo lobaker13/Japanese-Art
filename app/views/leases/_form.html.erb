@@ -31,10 +31,12 @@
     <%= form.select :art_id, options_for_select( Art.all.map{|a| [a.name, a.id]}), id: :lease_art_id %>
   </div>
 
+<% if user_signed_in? && current_user.admin? %>
   <div class="field">
     <%= form.label :client_id %>
     <%= form.select :client_id, options_for_select( User.all.map{|a| [a.full_name, a.id]}), id: :lease_user_id %>
   </div>
+<% end %>
 
   <div class="actions">
     <%= form.submit %>
