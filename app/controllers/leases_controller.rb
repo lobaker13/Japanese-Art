@@ -34,6 +34,9 @@ class LeasesController < ApplicationController
   # POST /leases
   # POST /leases.json
   def create
+    unless params[ :client_id ]
+      params[ :client_id ] = current_user.id
+    end 
     @lease = Lease.new(lease_params)
     @lease.user_id = current_user.id
     respond_to do |format|
@@ -50,6 +53,9 @@ class LeasesController < ApplicationController
   # PATCH/PUT /leases/1
   # PATCH/PUT /leases/1.json
   def update
+    unless params[ :client_id ]
+      params[ :client_id ] = current_user.id
+    end 
     respond_to do |format|
       if @lease.update(lease_params)
         format.html { redirect_to @lease, notice: 'Lease was successfully updated.' }
