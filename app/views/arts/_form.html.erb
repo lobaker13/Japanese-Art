@@ -14,7 +14,7 @@
 
 <div class="field">
   <%= form.label :name %>
-  <%= form.text_field :name, id: :art_name %>
+  <%= form.text_field :name, id: :art_name, :required => true %>
 </div>
 
 <div class="field">
@@ -34,22 +34,22 @@
 </div>
 <div class="field">
   <%= form.label :completed_at, "Date Completed" %>
-  <%= form.text_field :completed_at %>
+  <%= form.text_field :completed_at, :required => true %>
 </div>
 
 <div class="field">
   <%= form.label :user_id %>
-  <%= form.select :user_id, options_for_select( User.all.map{|a| [a.full_name, a.id]}) %>
+  <%= form.select :user_id, options_for_select( User.all.map{|a| [a.full_name, a.id]}), :required => true %>
 </div>
 
 <div class="field">
   <%= form.label :artist%>
-  <%= form.select :artist_id, options_for_select( Artist.pluck( :name, :id) ) %>
+  <%= form.select :artist_id, options_for_select( Artist.pluck( :name, :id), :required => true ) %>
 </div>
 
 <div class="field">
   <%= form.label :image %>
-  <%= form.file_field :image %>
+  <%= form.file_field :image, :required => true %>
 </div>
 
 <div class="actions">
