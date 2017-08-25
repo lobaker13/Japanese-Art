@@ -33,6 +33,7 @@ gem 'listen', '>= 3.0.5', '< 3.2'
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
