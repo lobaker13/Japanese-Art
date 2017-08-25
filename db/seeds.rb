@@ -21,7 +21,15 @@ User.create([
   password: "password",
   phone: "012-345-6789",
   admin: true
-}
+},
+  {
+fname: "Guest",
+lname: "User",
+email: "user@test.com",
+password: "password",
+phone: "012-345-6789",
+admin: false
+  }
   ])
 
 
